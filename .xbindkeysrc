@@ -1,0 +1,6 @@
+amixer -q sset Master 2+"
+    XF86AudioRaiseVolume
+"amixer -q sset Master 2-"
+    XF86AudioLowerVolume
+"/home/robert/.scripts/amixermutetoggle"
+    XF86AudioMute
