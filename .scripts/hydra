@@ -1,0 +1,5 @@
+#!/bin/sh
+
+xterm -e "yes hi dra";
+hydra&
+hydra&

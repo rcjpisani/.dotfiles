@@ -1,0 +1,10 @@
+out_to_console yes
+out_to_x no
+background no
+update_interval 1
+total_run_times 0
+alignment tr
+use_spacer none
+
+TEXT
+${if_mounted /mnt/usb}[USB] ${endif}[${wireless_essid wlo2} ${wireless_link_qual wlo2}%] [${cpu cpu0}% @ ${freq 0}MHz] [${battery_short}] [V ${exec amixer get Master -M | grep -oE "[[:digit:]]*%"}] [${time %a, %b %d, %Y %l:%M:%S}]

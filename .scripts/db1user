@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh user105@db1.sheridanc.on.ca

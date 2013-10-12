@@ -1,0 +1,9 @@
+#!/bin/sh
+
+while [ 1 ]
+do
+	sudo dhclient -r
+	sudo dhclient -1
+	echo Press Enter to release/renew...
+	read
+done
