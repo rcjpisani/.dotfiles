@@ -8,8 +8,7 @@
 alias ls='ls --color=auto'
 
 #User-defined
-#alias cdl='cd $1 && ls -la'
-alias pacman='sudo pacman';
+alias pacman='sudo pacman'
 alias shutdown='sudo shutdown -h -P now'
 alias redwm='cd ~/dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm'
 
