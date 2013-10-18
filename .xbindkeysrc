@@ -1,4 +1,4 @@
-amixer -q sset Master 2+"
+"amixer -q sset Master 2+"
     XF86AudioRaiseVolume
 "amixer -q sset Master 2-"
     XF86AudioLowerVolume
