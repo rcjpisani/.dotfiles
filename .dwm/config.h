@@ -24,8 +24,8 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1 << 2,       False,       -1 },
 	{ "Chromium", NULL,       NULL,       1 << 2,       False,       -1 },
 	{ "Gedit",    NULL,       NULL,       1 << 3,       False,       -1 },
-	{ "Eclipse",  "Eclipse",  NULL,       1 << 3,       False,       -1 }, //Main Eclipse Window
 	{ "Eclipse",  "eclipse",  NULL,       1 << 3,       False,       -1 }, //Eclipse spash screen
+	{ "Eclipse",  "Eclipse",  NULL,       1 << 3,       False,       -1 }, //Main Eclipse Window
 	{ "Adt",      NULL,       NULL,       1 << 3,       False,       -1 },
 	{ "Steam",    NULL,       NULL,       1 << 4,       True,        -1 },
 	{ "Mumble",   NULL,       NULL,       1 << 4,       False,       -1 },
