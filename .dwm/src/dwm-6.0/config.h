@@ -2,11 +2,11 @@
 
 /* appearance */
 static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
-static const char normbordercolor[] = "#000a01;
+static const char normbordercolor[] = "#64ca54";
 static const char normbgcolor[]     = "#000a01";
-static const char normfgcolor[]     = "#5ee88b";
-static const char selbordercolor[]  = "#5ee88b";
-static const char selbgcolor[]      = "#5ee88b";
+static const char normfgcolor[]     = "#64ca54";
+static const char selbordercolor[]  = "#000000";
+static const char selbgcolor[]      = "#64ca54";
 static const char selfgcolor[]      = "#000a01";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -20,10 +20,16 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
 	{ "Xterm",    NULL,       NULL,       1 << 1,       False,       -1 },
+	{ "Urxvt",    NULL,       NULL,       1 << 1,       False,       -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 2,       False,       -1 },
 	{ "Chromium", NULL,       NULL,       1 << 2,       False,       -1 },
 	{ "Gedit",    NULL,       NULL,       1 << 3,       False,       -1 },
+	{ "Eclipse",  "Eclipse",  NULL,       1 << 3,       False,       -1 }, //Main Eclipse Window
+	{ "Eclipse",  "eclipse",  NULL,       1 << 3,       False,       -1 }, //Eclipse spash screen
+	{ "Adt",      NULL,       NULL,       1 << 3,       False,       -1 },
 	{ "Steam",    NULL,       NULL,       1 << 4,       True,        -1 },
+	{ "Mumble",   NULL,       NULL,       1 << 4,       False,       -1 },
+
 };
 
 /* layout(s) */

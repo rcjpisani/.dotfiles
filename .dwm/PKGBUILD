@@ -17,7 +17,7 @@ source=(http://dl.suckless.org/dwm/dwm-$pkgver.tar.gz
 	config.h
 	dwm.desktop)
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '2453e037f46449774ec8afab49b4f1a2'
+         '7ac217f8c5b5e83beb4541403692b0db'
          '939f403a71b6e85261d09fc3412269ee')
 
 build() {
@@ -39,23 +39,17 @@ package() {
   install -m644 -D $srcdir/dwm.desktop $pkgdir/usr/share/xsessions/dwm.desktop
 }
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '80f3a7c34ca2d67c9a1e185f7eb77cc7'
+         '7ac217f8c5b5e83beb4541403692b0db'
          '939f403a71b6e85261d09fc3412269ee')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '829c5cd138e5b9a16c37f5548642b60b'
+         '3318f99d3f9161acaac783a09ccaa88e'
          '939f403a71b6e85261d09fc3412269ee')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '58719906174b85b03f4506f6b03d554c'
+         'a528b70a639a226d9dfb83c933462625'
          '939f403a71b6e85261d09fc3412269ee')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '829c5cd138e5b9a16c37f5548642b60b'
+         '0212ee8a5b7ae402da776c603e96d18a'
          '939f403a71b6e85261d09fc3412269ee')
 md5sums=('8bb00d4142259beb11e13473b81c0857'
-         '479b0008b668a5b9b27d34adf05523e1'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'e96e74920654e227506ecc9d069d8b90'
-         '939f403a71b6e85261d09fc3412269ee')
-md5sums=('8bb00d4142259beb11e13473b81c0857'
-         'e99883955456cfe8b2cb60f52de99640'
+         '4cbf0e32162d00aa3f7b681a363011d1'
          '939f403a71b6e85261d09fc3412269ee')
