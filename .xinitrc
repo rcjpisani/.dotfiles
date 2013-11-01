@@ -11,7 +11,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-feh --bg-scale ~/Pictures/electrify_green-wide.jpg &
+feh --bg-scale ~/Pictures/cubes.jpg &
 xbacklight -set 7 &
 conky | while read -r; do xsetroot -name "$REPLY"; done &
 xbindkeys &
