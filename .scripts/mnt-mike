@@ -1,3 +1,0 @@
-#!/bin/sh
-
-sshfs capstone_supermarket@hoangnguyen.ca:/mobile ~/sshfs/;
