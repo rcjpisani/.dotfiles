@@ -2,10 +2,10 @@
 
 /* appearance */
 static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
-static const char normbordercolor[] = "#64ca54";
+static const char normbordercolor[] = "#000000";
 static const char normbgcolor[]     = "#000a01";
 static const char normfgcolor[]     = "#64ca54";
-static const char selbordercolor[]  = "#000000";
+static const char selbordercolor[]  = "#64ca54";
 static const char selbgcolor[]      = "#64ca54";
 static const char selfgcolor[]      = "#000a01";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -14,7 +14,7 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "misc.", "term", "web", "work", "play" };
+static const char *tags[] = { "misc.", "term", "web", "work", "!work" };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */

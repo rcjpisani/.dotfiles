@@ -7,4 +7,4 @@ alignment tr
 use_spacer none
 
 TEXT
-${if_mounted /mnt/usb}[USB] ${endif}[${wireless_essid wlo2} ${wireless_link_qual wlo2}%] [${cpu cpu0}% @ ${freq 0}MHz] [${battery_short}] [V ${exec amixer get Master -M | grep -oE "[[:digit:]]*%"}] [${time %a, %b %d, %Y %l:%M:%S}]
+${if_mounted /mnt/usb}[USB] ${endif}[${wireless_essid wlo2} ${wireless_link_qual wlo2}%] [${cpu cpu0}% @ ${freq 0}MHz] [${battery_short}] [V ${exec amixer get Master -M | grep -oE "[[:digit:]]*%"} ${exec amixer get Master -M | grep -oE "\bo[fn]f?"}] [${time %a, %b %d, %Y %l:%M:%S}]
