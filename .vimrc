@@ -8,8 +8,8 @@ set linebreak
 set backspace=indent,eol,start
 syntax on
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=C:\Users\Robert\vimfiles\bundle\vundle\
+call vundle#rc('C:\Users\Robert\vimfiles\bundle\')
 
 " Bundles
 Bundle 'gmarik/vundle' 
