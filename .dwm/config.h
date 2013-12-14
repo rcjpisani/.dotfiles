@@ -3,11 +3,11 @@
 /* appearance */
 static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#000000";
-static const char normbgcolor[]     = "#000a01";
+static const char normbgcolor[]     = "#000000";
 static const char normfgcolor[]     = "#64ca54";
 static const char selbordercolor[]  = "#64ca54";
 static const char selbgcolor[]      = "#64ca54";
-static const char selfgcolor[]      = "#000a01";
+static const char selfgcolor[]      = "#000000";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */

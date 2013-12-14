@@ -57,3 +57,7 @@ workspace/
 .dev/
 .gitignore
 .vim/
+.swk
+.swl
+.swm
+.vvvvvv/
