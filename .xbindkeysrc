@@ -1,16 +1,6 @@
-"amixer -q sset Master 2+"
+"amixer -q sset PCM 2+"
     XF86AudioRaiseVolume
-"amixer -q sset Headphone 2+"
-    XF86AudioRaiseVolume
-"amixer -q sset Speaker 2+"
-    XF86AudioRaiseVolume
-
-"amixer -q sset Master 2-"
+"amixer -q sset PCM 2-"
     XF86AudioLowerVolume
-"amixer -q sset Headphone 2-"
-    XF86AudioLowerVolume
-"amixer -q sset Speaker 2-"
-    XF86AudioLowerVolume
-
 "/home/robert/.scripts/amixermutetoggle"
     XF86AudioMute

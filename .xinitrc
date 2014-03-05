@@ -11,12 +11,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-feh --bg-scale ~/Pictures/spiral.jpg &
+feh --bg-scale ~/Pictures/squareTrioGray.png &
 xbacklight -set 7 &
-conky | while read -r; do xsetroot -name "$REPLY"; done &
 xbindkeys &
+conky | while read -r; do xsetroot -name "$REPLY"; done &
 
-exec dwm
+# exec dwm
+exec openbox-session
 # exec gnome-session
 # exec startkde
 # exec startxfce4
