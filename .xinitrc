@@ -11,7 +11,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-feh --bg-scale ~/Pictures/squareTrioGray.png &
+#feh --bg-scale '/home/robert/Pictures/squareTrioGray.png'
 xbacklight -set 7 &
 xbindkeys &
 conky | while read -r; do xsetroot -name "$REPLY"; done &
