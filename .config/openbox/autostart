@@ -17,8 +17,10 @@
 #xfce-mcs-manager &
 
 # Launch Xcomppmgr and tint2 with openbox
-if which tint2 >/dev/null 2>&1; then
-  (sleep 2 && xcompmgr) &
-  (sleep 2 && tint2) &
-fi
+#if which tint2 >/dev/null 2>&1; then
+#  (sleep 2 && xcompmgr -cfC) &
+#  (sleep 2 && tint2) &
+#fi
+
+tint2 &
 volwheel &
