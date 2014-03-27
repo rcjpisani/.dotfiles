@@ -15,10 +15,10 @@ fi
 xbacklight -set 7 &
 xbindkeys &
 conky | while read -r; do xsetroot -name "$REPLY"; done &
+xrandr --output DVI-I-2 --mode 1920x1080 --rate 144.0
 
-# exec dwm
+#exec dwm
 exec openbox-session
 # exec gnome-session
 # exec startkde
 # exec startxfce4
-# ...or the Window Manager of your choice
