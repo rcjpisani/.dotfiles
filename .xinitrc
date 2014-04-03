@@ -12,13 +12,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 #feh --bg-scale '/home/robert/Pictures/squareTrioGray.png'
+#feh --bg-center --no-xinerama ~/Pictures/portal.jpg
 xbacklight -set 7 &
 xbindkeys &
 conky | while read -r; do xsetroot -name "$REPLY"; done &
-xrandr --output DVI-I-2 --mode 1920x1080 --rate 144.0
+#xrandr --output DVI-I-2 --mode 1920x1080 --rate 144.0 &
 
 #exec dwm
-exec openbox-session
-# exec gnome-session
+#exec openbox-session
+exec gnome-session
 # exec startkde
 # exec startxfce4

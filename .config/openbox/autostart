@@ -21,6 +21,6 @@
 #  (sleep 2 && xcompmgr -cfC) &
 #  (sleep 2 && tint2) &
 #fi
-feh --bg-max --no-xinerama ~/Pictures/portal.jpg
+feh --bg-center --no-xinerama ~/Pictures/portal.jpg
 tint2 &
 volwheel &

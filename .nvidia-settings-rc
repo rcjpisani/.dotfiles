@@ -1,8 +1,8 @@
 #
-# /home/robert/.dotfiles/.nvidia-settings-rc
+# /home/robert/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Thu Mar 27 14:47:43 2014
+# Generated on Sat Mar 29 21:12:55 2014
 #
 
 # ConfigProperties:
@@ -31,7 +31,7 @@ deskwhar:0.0/FSAAAppControlled=1
 deskwhar:0.0/LogAnisoAppControlled=1
 deskwhar:0.0/OpenGLImageSettings=1
 deskwhar:0.0/FSAAAppEnhanced=0
-deskwhar:0.0/XVideoSyncToDisplayID=DVI-I-0
+deskwhar:0.0/XVideoSyncToDisplayID=DVI-I-2
 deskwhar:0[DPY:DVI-I-0]/Dithering=0
 deskwhar:0[DPY:DVI-I-0]/DitheringMode=0
 deskwhar:0[DPY:DVI-I-0]/DitheringDepth=0
