@@ -62,6 +62,8 @@ alias update='pacman -Suy'
 alias mountusb='sudo mount -o gid=users,fmask=113,dmask=002 /dev/sdb1 /mnt/usb'
 alias umountusb='sudo umount /mnt/usb'
 
+alias v='vim'
+alias sv='sudo vim'
 alias redwm='cd ~/.dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm'
 alias xref='xrandr --output DVI-I-2 --mode 1920x1080 --rate 144.0'
 alias lamp-start="sudo systemctl start httpd.service mysqld.service"
