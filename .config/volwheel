@@ -1,8 +1,0 @@
-PCM
-xterm -e 'alsamixer'
-3
-simple-green
-/usr/share/volwheel/icons/volwheel.png
-0
-Alsa
-PCM:Master:Capture:

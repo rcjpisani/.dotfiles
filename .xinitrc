@@ -16,6 +16,7 @@ fi
 xbacklight -set 7 &
 xbindkeys &
 conky | while read -r; do xsetroot -name "$REPLY"; done &
+speech-dispatcher &
 #xrandr --output DVI-I-2 --mode 1920x1080 --rate 144.0 &
 
 #exec dwm
