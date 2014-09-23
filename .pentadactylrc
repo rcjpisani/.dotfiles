@@ -1,4 +1,4 @@
-"hg6928
+"hg7067
 
 loadplugins '\.(js|penta)$'
 group user
@@ -112,5 +112,6 @@ highlight -link=s_base1 URL
 highlight -link=s_base1 URLExtra
 highlight UsageItem:nth-of-type(2n) background: rgba(0, 43, 54, .04);
 highlight -link=s_base03,s_yellow_back WarningMsg
+set defsearch=duckduckgo
 
 " vim: set ft=pentadactyl:

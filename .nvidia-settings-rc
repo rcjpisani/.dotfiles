@@ -2,7 +2,7 @@
 # /home/robert/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Sat Mar 29 21:12:55 2014
+# Generated on Tue Jun  3 11:42:06 2014
 #
 
 # ConfigProperties:
@@ -20,7 +20,7 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 
 # Attributes:
 
-deskwhar:0.0/SyncToVBlank=0
+deskwhar:0.0/SyncToVBlank=1
 deskwhar:0.0/LogAniso=0
 deskwhar:0.0/FSAA=0
 deskwhar:0.0/TextureSharpen=0

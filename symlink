@@ -2,7 +2,7 @@
 
 dir=.dotfiles
 olddir=.dotfiles_old
-files=".asoundrc .bash_profile .nvidia-settings-rc .Xresources .config .dwm .bashrc .conkyrc .pentadactylrc .pentadactyl .scripts .vim .vimrc .xinitrc .xbindkeysrc .zshrc"
+files=".10-monitor.conf .asoundrc .bash_profile .nvidia-settings-rc .Xresources .config .dwm .bashrc .conkyrc .pentadactylrc .pentadactyl .scripts .vim .vimrc .xinitrc .xbindkeysrc .zshrc"
 
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p ~/$olddir

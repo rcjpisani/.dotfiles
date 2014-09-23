@@ -12,6 +12,36 @@ export TMPDIR="$TMP"
 export TMPPREFIX="${TMPDIR}/zsh"
 export SUDO_EDITOR="/usr/bin/vim -p -X"
 
+#completion
+
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+#functions
+termtitle() {
+	case "$TERM" in
+		rxvt*|xterm|nxterm|gnome|screen|screen-*)
+			local prompt_host="${(%):-%m}"
+			local prompt_user="${(%):-%n}"
+			local prompt_char="${(%):-%~}"
+			case "$1" in
+				precmd)
+					printf '\e]0;%s@%s: %s\a' "${prompt_user}" "${prompt_host}" "${prompt_char}"
+					;;
+				preexec)
+					printf '\e]0;%s [%s@%s: %s]\a' "$2" "${prompt_user}" "${prompt_host}" "${prompt_char}"
+					;;
+			esac
+			;;
+	esac
+}
+
+preexec() {
+	# Set terminal title along with current executed command pass as second argument
+	termtitle preexec "${(V)1}"
+}
+
+#autoload
 autoload -U compinit
 compinit
 autoload -U promptinit
@@ -35,6 +65,8 @@ NC='\e[0m'
 
 #prompt
 PROMPT="%n@%m[%{$fg[green]%}%~%{$reset_color%}]%# "
+PS2="% "
+PS3=PS2
 
 #aliases
 
@@ -56,15 +88,29 @@ alias shutdown='sudo systemctl poweroff'
 alias restart='sudo systemctl reboot'
 alias sleep='sudo systemctl suspend'
 
+alias sce='sudo systemctl enable'
+alias scd='sudo systemctl disable'
+
 alias pacman='sudo pacman'
 alias update='pacman -Suy'
+alias update-unity='pacman -S $(pacman -Slq Unity-for-Arch)'
 
 alias mountusb='sudo mount -o gid=users,fmask=113,dmask=002 /dev/sdb1 /mnt/usb'
 alias umountusb='sudo umount /mnt/usb'
 
+alias term='urxvt +sb -bg #303030 -fg #C7C7C7 -cr #FFFFFF'
 alias v='vim'
 alias sv='sudo vim'
+alias note='vim `date "+%y-%m-%d"`'
+
 alias redwm='cd ~/.dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm'
-alias xref='xrandr --output DVI-I-2 --mode 1920x1080 --rate 144.0'
-alias lamp-start="sudo systemctl start httpd.service mysqld.service"
-alias lamp-stop="sudo systemctl stop httpd.service mysqld.service"
+alias xref='xrandr --output HDMI-0 --off --output DVI-I-1 --mode 1680x1050 --rate 60.00 --pos 1920x0 --rotate normal --output DVI-I-0 --off --output DVI-I-3 --off --output DVI-I-2 --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal'
+alias lamp-start='sudo systemctl start httpd.service mysqld.service'
+alias lamp-stop='sudo systemctl stop httpd.service mysqld.service'
+alias mysqlroot='mysql -u root -p'
+
+alias minecraft='java -jar /home/robert/shared/games/minecraft/Minecraft.jar'
+alias mcserver='cd /home/robert/shared/games/minecraft/server;java -d64 -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui'
+alias mount-android='go-mtpfs Android'
+alias umount-android='fusermount -u /home/robert/Android'
+alias steam-win='ALSA_DEFAULT_PCM="plug:dmix" wine C:\\users\\robert\\My\ Documents\\shared\\Games\\wine\\windows\\drive_c\\Program\ Files\ \(x86\)\\Steam\\Steam.exe'
