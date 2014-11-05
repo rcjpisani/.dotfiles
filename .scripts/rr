@@ -2,8 +2,8 @@
 
 while [ 1 ]
 do
-	sudo dhclient -r
-	sudo dhclient -1
-	echo Press Enter to release/renew...
+	sudo dhcpcd -k
+	sudo dhcpcd -r 192.168.0.10
+	echo Press Enter to release/renew again...
 	read
 done
