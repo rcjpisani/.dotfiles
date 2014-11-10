@@ -9,7 +9,7 @@ set backspace=indent,eol,start
 syntax on
 
 set rtp+=/home/robert/.vim/bundle/vundle/
-call vundle#rc('/home/robert/.vim/bundle/')
+call vundle#begin()
 
 " Bundles
 Bundle 'gmarik/vundle' 

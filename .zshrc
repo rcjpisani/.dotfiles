@@ -93,7 +93,7 @@ alias scd='sudo systemctl disable'
 
 alias pacman='sudo pacman'
 alias update='pacman -Suy'
-alias update-unity='pacman -S $(pacman -Slq Unity-for-Arch)'
+alias systemctl='sudo systemctl'
 
 alias mountusb='sudo mount -o gid=users,fmask=113,dmask=002 /dev/sdb1 /mnt/usb'
 alias umountusb='sudo umount /mnt/usb'
