@@ -20,7 +20,8 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
 Bundle 'itchyny/lightline.vim'
 Bundle 'godlygeek/tabular'
-Bundle 'chilicuil/vim-sprunge'
+" Bundle 'chilicuil/vim-sprunge'
+call vundle#end()
 let g:lightline = {
 			\'colorscheme' : 'solarized',
 			\}
