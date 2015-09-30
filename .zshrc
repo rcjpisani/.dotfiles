@@ -83,6 +83,8 @@ alias grep='grep --color=auto'
 
 alias df='df -h'
 
+alias pls='sudo $(fc -ln -1)'
+
 alias shutdown-bin='sudo shutdown -h -P now'
 alias shutdown='sudo systemctl poweroff'
 alias restart='sudo systemctl reboot'
@@ -92,7 +94,7 @@ alias sce='sudo systemctl enable'
 alias scd='sudo systemctl disable'
 
 alias pacman='sudo pacman'
-alias update='pacman -Suy'
+alias update='pacman -Syu'
 alias systemctl='sudo systemctl'
 
 alias mountusb='sudo mount -o gid=users,fmask=113,dmask=002 /dev/sdb1 /mnt/usb'
@@ -109,9 +111,3 @@ alias lamp-start='sudo systemctl start nginx.service mysqld.service php-fpm.serv
 alias lamp-restart='sudo systemctl restart nginx.service mysqld.service php-fpm.service'
 alias lamp-stop='sudo systemctl stop nginx.service mysqld.service php-fpm.service'
 alias mysqlroot='mysql -u root -p'
-
-alias minecraft='java -jar /home/robert/shared/games/minecraft/Minecraft.jar'
-alias mcserver='cd /home/robert/shared/games/minecraft/server;java -d64 -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui'
-alias mount-android='go-mtpfs Android'
-alias umount-android='fusermount -u /home/robert/Android'
-alias steam-win='ALSA_DEFAULT_PCM="plug:dmix" wine C:\\users\\robert\\My\ Documents\\shared\\Games\\wine\\windows\\drive_c\\Program\ Files\ \(x86\)\\Steam\\Steam.exe'

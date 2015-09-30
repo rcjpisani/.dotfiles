@@ -6,21 +6,28 @@ set number
 set nowrap
 set linebreak
 set backspace=indent,eol,start
+set laststatus=2
+set t_Co=256
+if has('gui_running')
+	colorscheme evening
+endif
 syntax on
 
-set rtp+=/home/robert/.vim/bundle/vundle/
+set rtp+=/home/robert/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Bundles
-Bundle 'gmarik/vundle' 
+Bundle 'VundleVim/Vundle.vim' 
+Bundle 'itchyny/lightline.vim'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'godlygeek/tabular'
+Bundle 'scrooloose/snipmate-snippets'
+Bundle 'scrooloose/nerdtree'
 Bundle 'tomtom/tlib_vim'
 Bundle 'honza/vim-snippets'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
-Bundle 'itchyny/lightline.vim'
-Bundle 'godlygeek/tabular'
-" Bundle 'chilicuil/vim-sprunge'
 call vundle#end()
 let g:lightline = {
 			\'colorscheme' : 'solarized',
