@@ -11,6 +11,7 @@ export TEMP="$TMP"
 export TMPDIR="$TMP"
 export TMPPREFIX="${TMPDIR}/zsh"
 export SUDO_EDITOR="/usr/bin/vim -p -X"
+export TERM=xterm-256color
 
 #completion
 
