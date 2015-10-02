@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved
-filetype off                  " required!
+filetype off                  " required
 
 " My Settings
 set number
@@ -7,37 +7,50 @@ set nowrap
 set linebreak
 set backspace=indent,eol,start
 set laststatus=2
+set bg=dark
 set t_Co=256
-colorscheme torte
+colorscheme torte 
 syntax on
 
-set rtp+=/home/robert/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" Bundles
-Bundle 'VundleVim/Vundle.vim' 
-Bundle 'itchyny/lightline.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'godlygeek/tabular'
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/snipmate-snippets'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tomtom/tlib_vim'
-Bundle 'honza/vim-snippets'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'garbas/vim-snipmate'
+" Plugins
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/solarized'
+Plugin 'itchyny/lightline.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'godlygeek/tabular'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/snipmate-snippets'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tomtom/tlib_vim'
+Plugin 'honza/vim-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'garbas/vim-snipmate'
 call vundle#end()
+
+if has('gui_running')
+	set background=dark
+	colorscheme solarized
+else
+	let g:solarized_termcolors=256
+	set background=dark
+	colorscheme solarized
+endif
 let g:lightline = {
 			\'colorscheme' : 'solarized',
 			\}
 
-filetype plugin indent on     " required!
+filetype plugin indent on     " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to  auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
+" Put your non-Plugin stuff after this line
