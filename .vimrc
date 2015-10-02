@@ -8,11 +8,7 @@ set linebreak
 set backspace=indent,eol,start
 set laststatus=2
 set t_Co=256
-if has('gui_running')
-	colorscheme evening
-else
-	colorscheme delek
-endif
+colorscheme torte
 syntax on
 
 set rtp+=/home/robert/.vim/bundle/Vundle.vim
