@@ -6,6 +6,7 @@ set number
 set nowrap
 set linebreak
 set backspace=indent,eol,start
+set autochdir
 set laststatus=2
 set bg=dark
 set t_Co=256

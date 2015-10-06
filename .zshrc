@@ -71,6 +71,7 @@ PS3=PS2
 
 #aliases
 
+cdl() { cd "$@" && ls; }
 alias ..='cd ..'
 alias ....='cd ../..'
 alias ......='cd ../../..'
@@ -93,10 +94,10 @@ alias sleep='sudo systemctl suspend'
 
 alias sce='sudo systemctl enable'
 alias scd='sudo systemctl disable'
+alias scr='sudo systemctl restart'
 
 alias pacman='sudo pacman'
 alias update='pacman -Syu'
-alias systemctl='sudo systemctl'
 
 alias mountusb='sudo mount -o gid=users,fmask=113,dmask=002 /dev/sdb1 /mnt/usb'
 alias umountusb='sudo umount /mnt/usb'
@@ -107,7 +108,10 @@ alias sv='sudo vim'
 alias note='vim `date "+%y-%m-%d"`'
 
 alias redwm='cd ~/.dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm'
-alias xref='xrandr --output HDMI-0 --off --output DVI-I-1 --mode 1680x1050 --rate 60.00 --pos 1920x0 --rotate normal --output DVI-I-0 --off --output DVI-I-3 --off --output DVI-I-2 --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal'
+
+alias serv='ssh robert@servwhar'
+alias acnmp='ssh rpadmin@cpres5.idig.net'
+
 alias lamp-start='sudo systemctl start nginx.service mysqld.service php-fpm.service'
 alias lamp-restart='sudo systemctl restart nginx.service mysqld.service php-fpm.service'
 alias lamp-stop='sudo systemctl stop nginx.service mysqld.service php-fpm.service'
