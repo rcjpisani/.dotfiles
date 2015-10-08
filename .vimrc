@@ -34,6 +34,10 @@ call vundle#end()
 if has('gui_running')
 	set background=dark
 	colorscheme solarized
+	set guioptions-=m  "remove menu bar
+	set guioptions-=T  "remove toolbar
+	set guioptions-=r  "remove right-hand scroll bar
+	set guioptions-=L  "remove left-hand scroll bar
 else
 	let g:solarized_termcolors=256
 	set background=dark

@@ -110,7 +110,7 @@ alias note='vim `date "+%y-%m-%d"`'
 alias redwm='cd ~/.dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm'
 
 alias serv='ssh robert@servwhar'
-alias acnmp='ssh rpadmin@cpres5.idig.net'
+alias acnmp='ssh rpadmin@vps.erinic.com'
 
 alias lamp-start='sudo systemctl start nginx.service mysqld.service php-fpm.service'
 alias lamp-restart='sudo systemctl restart nginx.service mysqld.service php-fpm.service'
