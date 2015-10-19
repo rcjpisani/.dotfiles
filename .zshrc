@@ -65,7 +65,7 @@ CYAN='\e[1;36m'
 NC='\e[0m'
 
 #prompt
-PROMPT="%n@%m[%{$fg[green]%}%~%{$reset_color%}]%# "
+PROMPT="%n@%m[%{$fg[green]%}%.%{$reset_color%}]%# "
 PS2="% "
 PS3=PS2
 

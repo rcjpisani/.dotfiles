@@ -11,14 +11,14 @@ set laststatus=2
 set bg=dark
 set t_Co=256
 set cursorline
-colorscheme torte 
+set background=dark	
+colorscheme Tomorrow-Night
 syntax on
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Plugins
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/solarized'
 Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
@@ -34,20 +34,14 @@ Plugin 'kien/ctrlp.vim'
 call vundle#end()
 
 if has('gui_running')
-	set background=dark
-	colorscheme Tomorrow-Night
 	set guioptions-=m  "remove menu bar
 	set guioptions-=T  "remove toolbar
 	set guioptions-=r  "remove right-hand scroll bar
 	set guioptions-=L  "remove left-hand scroll bar
-else
-	"let g:solarized_termcolors=256
-	set background=dark
-	colorscheme Tomorrow-Night
 endif
 let mapleader=","
 let g:lightline = {
-			\'colorscheme' : 'Tomorrow_Night',
-			\}
+	\'colorscheme' : 'streamline',
+	\}
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 filetype plugin indent on     " required
