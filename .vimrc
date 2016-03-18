@@ -31,6 +31,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'garbas/vim-snipmate'
 Plugin 'kien/ctrlp.vim'
+Plugin 'chilicuil/vim-sprunge'
 call vundle#end()
 
 if has('gui_running')
