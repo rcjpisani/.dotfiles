@@ -1,4 +1,5 @@
 # Vim plugins #
 ###############
 !.vim/Vundle.vim
+!.vim/lightline.vim
 .vim/*
