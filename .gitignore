@@ -1,0 +1,4 @@
+# Vim plugins #
+###############
+!.vim/Vundle.vim
+.vim/*

@@ -32,6 +32,8 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'garbas/vim-snipmate'
 Plugin 'kien/ctrlp.vim'
 Plugin 'chilicuil/vim-sprunge'
+Plugin 'moll/vim-node'
+
 call vundle#end()
 
 if has('gui_running')
