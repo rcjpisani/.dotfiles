@@ -1,0 +1,11 @@
+#!/bin/sh
+echo "==> Starting setup process"
+cd ./bundle
+echo "==> Cloning Vundle"
+git clone https://github.com/VundleVim/Vundle.vim.git
+echo "==> Installing Vundle"
+vim +PluginInstall +qall
+cd ../
+echo "==> Linking streamline.vim"
+ln ./colors/lightline/streamline.vim ./bundle/lightline.vim/autoload/lightline/colorscheme/
+echo "==> Done!"
