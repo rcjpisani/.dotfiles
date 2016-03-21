@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "==> Starting setup process"
-cd ./bundle
+mkdir ./bundle && cd ./bundle
 echo "==> Cloning Vundle"
 git clone https://github.com/VundleVim/Vundle.vim.git
 echo "==> Installing Vundle"
