@@ -33,6 +33,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'kien/ctrlp.vim'
 Plugin 'chilicuil/vim-sprunge'
 Plugin 'moll/vim-node'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
@@ -44,7 +45,23 @@ if has('gui_running')
 endif
 let mapleader=","
 let g:lightline = {
-	\'colorscheme' : 'streamline',
-	\}
+      \ 'colorscheme': 'streamline',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"|":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ }
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 filetype plugin indent on     " required
