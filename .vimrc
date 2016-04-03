@@ -12,6 +12,51 @@ set bg=dark
 set t_Co=256
 set cursorline
 set background=dark	
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set lazyredraw
+
+set noexpandtab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+
+set autoindent
+set smartindent
+set nowrap
+set linebreak
+set number
+
+set laststatus=2
+
+set showmatch
+set matchtime=2
+
+set hidden
+
+set cursorline
+
+set splitbelow
+set splitright
+
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
+set encoding=utf-8
+
+try
+	lang en_US
+catch
+endtry
+
+set fileformats=unix,dos,mac
+
 colorscheme Tomorrow-Night
 syntax on
 
@@ -65,3 +110,9 @@ let g:lightline = {
       \ }
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 filetype plugin indent on     " required
+
+"Easy split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
