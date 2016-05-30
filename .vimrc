@@ -10,7 +10,8 @@ set autochdir
 set laststatus=2
 set bg=dark
 set t_Co=256
-set cursorline
+set term=screen-256color
+set cursorle
 set background=dark	
 set hlsearch
 set incsearch
