@@ -11,7 +11,7 @@ set laststatus=2
 set bg=dark
 set t_Co=256
 set term=screen-256color
-set cursorle
+set cursorline
 set background=dark	
 set hlsearch
 set incsearch
