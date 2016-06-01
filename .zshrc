@@ -114,7 +114,7 @@ alias redwm='cd ~/.dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killal
 alias serv='ssh robert@servwhar'
 alias acnmp='ssh rpadmin@vps.erinic.com'
 
-alias lamp-start='sudo systemctl start nginx.service mysqld.service php-fpm.service'
-alias lamp-restart='sudo systemctl restart nginx.service mysqld.service php-fpm.service'
+alias lemp-start='sudo systemctl start nginx.service mysqld.service php-fpm.service'
+alias lemp-restart='sudo systemctl restart nginx.service mysqld.service php-fpm.service'
 alias lamp-stop='sudo systemctl stop nginx.service mysqld.service php-fpm.service'
 alias mysqlroot='mysql -u root -p'
