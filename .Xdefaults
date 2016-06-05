@@ -1,0 +1,26 @@
+URxvt.buffered: true
+URxvt.transparent: 0
+URxvt.internalBorder: 4
+URxvt.title: URxvt
+URxvt.saveLines: 0
+
+URxvt.font: xft:DejaVu Sans Mono:size=8
+URxvt.intensityStyles: true
+URxvt.scrollBar: false
+
+URxvt.perl-ext-common: default,matcher
+URxvt.matcher.button: 2
+URxvt.urlLauncher: firefox
+
+URxvt.cursorBlink: true
+
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+URxvt.foreground:  #c5c8c6
+URxvt.background:  #1d1f21
+URxvt.cursorColor: #aeafad
