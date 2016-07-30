@@ -59,9 +59,11 @@ endtry
 set fileformats=unix,dos,mac
 
 colorscheme Tomorrow-Night
+
 syntax on
 
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
 " Plugins
 Plugin 'VundleVim/Vundle.vim'
@@ -72,6 +74,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/snipmate-snippets'
 Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
 Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -89,7 +92,9 @@ if has('gui_running')
 	set guioptions-=r  "remove right-hand scroll bar
 	set guioptions-=L  "remove left-hand scroll bar
 endif
+
 let mapleader=","
+
 let g:lightline = {
       \ 'colorscheme': 'streamline',
       \ 'active': {
@@ -110,6 +115,7 @@ let g:lightline = {
       \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
 let g:cssColorVimDoNotMessMyUpdatetime = 1
+
 filetype plugin indent on     " required
 
 "Easy split navigation
@@ -117,3 +123,5 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+nmap <F8> :TagbarToggle<CR>
