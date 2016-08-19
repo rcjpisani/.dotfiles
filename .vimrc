@@ -58,10 +58,6 @@ endtry
 
 set fileformats=unix,dos,mac
 
-" Base16
-let base16colorspace=256
-colorscheme base16-tomorrow-night
-
 syntax on
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -97,6 +93,10 @@ if has('gui_running')
 endif
 
 let mapleader=","
+
+" Base16
+let base16colorspace=256
+colorscheme base16-tomorrow-night
 
 let g:lightline = {
       \ 'colorscheme': 'Tomorrow_Night',
