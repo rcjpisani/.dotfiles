@@ -58,7 +58,9 @@ endtry
 
 set fileformats=unix,dos,mac
 
-colorscheme Tomorrow-Night
+" Base16
+let base16colorspace=256
+colorscheme base16-tomorrow-night
 
 syntax on
 
@@ -67,6 +69,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Plugins
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'chriskempson/base16-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
@@ -96,7 +99,7 @@ endif
 let mapleader=","
 
 let g:lightline = {
-      \ 'colorscheme': 'streamline',
+      \ 'colorscheme': 'Tomorrow_Night',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
