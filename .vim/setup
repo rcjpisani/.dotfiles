@@ -12,4 +12,5 @@ cp ~/.vim/bundle/base16-vim/colors/*.vim ~/.vim/colors
 zsh
 base16_tomorrow-night
 exit
+cd ~
 echo "==> Done!"
