@@ -60,7 +60,7 @@ set fileformats=unix,dos,mac
 
 " Base16
 let base16colorspace=256
-colorscheme base16-tomorrow-night
+colorscheme Tomorrow-Night
 
 syntax on
 
