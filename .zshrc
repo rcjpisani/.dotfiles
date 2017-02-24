@@ -90,22 +90,12 @@ alias df='df -h'
 
 alias pls='sudo $(fc -ln -1)'
 
-alias shutdown-bin='sudo shutdown -h -P now'
 alias shutdown='sudo systemctl poweroff'
 alias restart='sudo systemctl reboot'
 alias sleep='sudo systemctl suspend'
 
-alias scstart='sudo systemctl start'
-alias scstop='sudo systemctl stop'
-alias scenable='sudo systemctl enable'
-alias scdisable='sudo systemctl disable'
-alias screstart='sudo systemctl restart'
-
 alias pacman='sudo pacman'
 alias update='pacman -Syu'
-
-alias mountusb='sudo mount -o gid=users,fmask=113,dmask=002 /dev/sdb1 /mnt/usb'
-alias umountusb='sudo umount /mnt/usb'
 
 alias term='urxvt +sb -bg #303030 -fg #C7C7C7 -cr #FFFFFF'
 alias v='vim'
@@ -113,11 +103,3 @@ alias sv='sudo vim'
 alias note='vim `date "+%y-%m-%d"`'
 
 alias redwm='cd ~/.dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm'
-
-alias serv='ssh robert@servwhar'
-alias acnmp='ssh rpadmin@vps.erinic.com'
-
-alias lemp-start='sudo systemctl start nginx.service mysqld.service php-fpm.service'
-alias lemp-restart='sudo systemctl restart nginx.service mysqld.service php-fpm.service'
-alias lamp-stop='sudo systemctl stop nginx.service mysqld.service php-fpm.service'
-alias mysqlroot='mysql -u root -p'
