@@ -104,5 +104,3 @@ alias sv='sudo vim'
 alias note='vim `date "+%y-%m-%d"`'
 
 alias redwm='cd ~/.dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm'
-
-alias vwdevca='ssh rpisani@vwdev.ca'
