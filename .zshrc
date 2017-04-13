@@ -46,7 +46,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 #autoload
-autoload -U compinit
+autoload -Uz compinit
 compinit
 autoload -U promptinit
 promptinit
@@ -80,6 +80,7 @@ alias ....='cd ../..'
 alias ......='cd ../../..'
 
 alias ls='ls -Fh --color=always'
+# alias ls='ls -FhG' # for Mac
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
@@ -103,3 +104,5 @@ alias sv='sudo vim'
 alias note='vim `date "+%y-%m-%d"`'
 
 alias redwm='cd ~/.dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm'
+
+alias vwdevca='ssh rpisani@vwdev.ca'
