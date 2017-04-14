@@ -51,6 +51,9 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 set encoding=utf-8
 
+set ttimeoutlen=0
+set timeoutlen=1000
+
 try
 	lang en_US
 catch
