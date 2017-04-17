@@ -1,6 +1,9 @@
 #!/bin/zsh
 ##.zshrc##
 
+#path
+PATH=$PATH:
+
 #history + exports
 HISTFILE="${HOME}/.zsh_history"
 HISTSIZE='10000'
@@ -84,6 +87,7 @@ alias ls='ls -Fh --color=always'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
+alias tree='tree -C'
 
 alias grep='grep --color=auto'
 

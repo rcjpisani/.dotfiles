@@ -2,11 +2,13 @@ set nocompatible              " be iMproved
 filetype off                  " required
 
 " My Settings
+set path+=**
+set wildmenu
 set number
+set relativenumber
 set nowrap
 set linebreak
 set backspace=indent,eol,start
-set autochdir
 set laststatus=2
 set bg=dark
 set t_Co=256
@@ -134,3 +136,6 @@ nmap <F8> :TagbarToggle<CR>
 
 " Press Space to turn off highlighting and clear any message already displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" Create tags file
+command! MakeTags !ctags -R .
