@@ -2,7 +2,7 @@
 ##.zshrc##
 
 #path
-PATH=$PATH:
+PATH=$PATH:~/.config/composer/vendor/bin:~/.npm-packages/bin
 
 #history + exports
 HISTFILE="${HOME}/.zsh_history"
