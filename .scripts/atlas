@@ -1,4 +1,0 @@
-#!/bin/sh
-
-ssh-copy-id -i ~/.ssh/id_rsa.pub pisanrob@atlas.sheridanc.on.ca
-ssh pisanrob@atlas.sheridanc.on.ca;

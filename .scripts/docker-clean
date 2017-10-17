@@ -1,0 +1,49 @@
+#!/bin/sh
+
+function usage ()
+{
+	echo "Usage: $0 --OPTION..."
+
+	return 0;
+}
+
+function statusMessage ()
+{
+	if [ $2 -ne 0 ]
+	then
+		echo "Failed to remove $1."
+	else
+		echo "Successfully removed $1!"
+	fi
+
+	return 0
+}
+
+if [ $# -eq 0 ]
+then
+	usage
+	exit 1
+else
+	while [ $# -gt 0 ]
+	do
+		case $1 in
+			-c | --containers)
+				docker rm $(docker ps -q -f status=exited)
+				statusMessage containers $?;;
+			-i | --images)
+				docker rmi $(docker images -q)
+				statusMessage images $?;;
+			-v | --volumes)
+				docker volume rm $(docker volume ls -qf dangling=true)
+				statusMessage volumes $?;;
+			-*)
+				usage
+				exit 1;;
+			*)
+				break;;
+		esac
+		shift
+	done
+fi
+
+echo "Finished."

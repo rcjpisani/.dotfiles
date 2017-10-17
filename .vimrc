@@ -22,9 +22,19 @@ set smartcase
 set lazyredraw
 
 set noexpandtab
-set shiftwidth=4
-set tabstop=4
-"set softtabstop=4
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+
+augroup twospaces
+	    autocmd!
+	    autocmd FileType javascript,html setlocal expandtab ts=2 sts=2 sw=2
+augroup END
+
+augroup fourspaces
+	    autocmd!
+	    autocmd FileType java,php,python setlocal expandtab ts=4 sts=4 sw=4
+augroup END
 
 set autoindent
 set smartindent

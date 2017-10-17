@@ -1,3 +1,0 @@
-#!/bin/sh
-
-sshfs pisanrob@atlas.sheridanc.on.ca:/usr/home/students9/29/pisanrob ~/sshfs;
