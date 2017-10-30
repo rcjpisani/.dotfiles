@@ -105,6 +105,6 @@ alias update='pacman -Syu'
 alias term='urxvt +sb -bg #303030 -fg #C7C7C7 -cr #FFFFFF'
 alias v='vim'
 alias sv='sudo vim'
-alias note='vim `date "+%y-%m-%d"`'
+alias note='vim `date "+%Y-%m-%d"`'
 
 alias redwm='cd ~/.dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm'
