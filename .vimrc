@@ -28,7 +28,7 @@ set shiftwidth=8
 
 augroup twospaces
 	    autocmd!
-	    autocmd FileType javascript,html setlocal expandtab ts=2 sts=2 sw=2
+	    autocmd FileType javascript,json,html setlocal expandtab ts=2 sts=2 sw=2
 augroup END
 
 augroup fourspaces
