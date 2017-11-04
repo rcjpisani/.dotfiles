@@ -89,7 +89,7 @@ alias la='ls -a'
 alias lla='ls -la'
 alias tree='tree -C'
 
-alias grep='grep --color=auto'
+alias grep='grep --color=always'
 
 alias df='df -h'
 
@@ -98,9 +98,6 @@ alias pls='sudo $(fc -ln -1)'
 alias shutdown='sudo systemctl poweroff'
 alias restart='sudo systemctl reboot'
 alias sleep='sudo systemctl suspend'
-
-alias pacman='sudo pacman'
-alias update='pacman -Syu'
 
 alias term='urxvt +sb -bg #303030 -fg #C7C7C7 -cr #FFFFFF'
 alias v='vim'
