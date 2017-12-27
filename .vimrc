@@ -28,12 +28,17 @@ set shiftwidth=8
 
 augroup twospaces
 	    autocmd!
-	    autocmd FileType javascript,json,html setlocal expandtab ts=2 sts=2 sw=2
+	    autocmd FileType javascript,json,html,typescript setlocal expandtab ts=2 sts=2 sw=2
 augroup END
 
 augroup fourspaces
 	    autocmd!
 	    autocmd FileType java,php,python setlocal expandtab ts=4 sts=4 sw=4
+augroup END
+
+augroup typescript
+	autocmd!
+	autocmd BufRead,BufNewFile *.ts setfiletype typescript
 augroup END
 
 set autoindent
@@ -99,8 +104,8 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'garbas/vim-snipmate'
 Plugin 'kien/ctrlp.vim'
 Plugin 'chilicuil/vim-sprunge'
-Plugin 'moll/vim-node'
 Plugin 'tpope/vim-fugitive'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 
