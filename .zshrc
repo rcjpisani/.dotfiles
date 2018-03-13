@@ -77,7 +77,8 @@ PS3=PS2
 
 #aliases
 
-cdl() { cd "$@" && ls; }
+alias rm='rm -i'
+
 alias ..='cd ..'
 alias ....='cd ../..'
 alias ......='cd ../../..'

@@ -1,3 +1,4 @@
 *.sw*
 .vim/*
 .bin/composer*
+Vundle.vim
