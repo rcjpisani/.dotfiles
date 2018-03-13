@@ -14,8 +14,8 @@ printf '%s\n' "Changing to the $dir directory..."
 cd ~/$dir
 printf '%s\n' "Done."
 
+printf '%s\n' "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
-	printf '%s\n' "Moving any existing dotfiles from ~ to $olddir"
 	mv ~/$file ~/$olddir
 	printf '%s\n' "Creating symlink to $file in home dir."
 	ln -s ~/$dir/$file ~/$file
