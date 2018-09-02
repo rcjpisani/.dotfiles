@@ -85,6 +85,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 # Autoload
 autoload -Uz compinit && compinit
 autoload -Uz promptinit && promptinit
+autoload -U colors && colors
 autoload -Uz vcs_info
 
 # Git info
