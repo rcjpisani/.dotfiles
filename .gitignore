@@ -2,3 +2,4 @@
 .vim/*
 .bin/composer*
 Vundle.vim
+.tmp/*
