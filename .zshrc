@@ -75,7 +75,7 @@ git_prompt_info() {
 	branch_prompt=$(git branch 2> /dev/null | awk '$1 == "*" { print $2 }')
 	if [ -n "$branch_prompt" ]; then
 		status_icon=$(git_status)
-		echo "[git:%{$terminfo[bold]$fg[cyan]%}$branch_prompt%{$reset_color%}:$status_icon]"
+		echo "[%{$terminfo[bold]$fg[cyan]%}$branch_prompt%{$reset_color%}:%{$terminfo[bold]$status_icon%}]"
 	fi
 }
 
