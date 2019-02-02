@@ -2,7 +2,7 @@
 ##.zshrc##
 
 # Path
-PATH=$PATH:~/.bin:~/.config/composer/vendor/bin:~/.npm-packages/bin
+PATH=$PATH:~/.bin:~/.local/bin:~/.config/composer/vendor/bin:~/.npm-packages/bin
 
 # Options
 setopt PROMPT_SUBST
