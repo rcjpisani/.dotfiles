@@ -2,7 +2,7 @@
 ##.zshrc##
 
 # Path
-PATH=$PATH:~/.bin:~/.local/bin:~/.config/composer/vendor/bin:~/.npm-packages/bin
+PATH=$PATH:~/.bin:~/.local/bin:~/.config/composer/vendor/bin:~/.npm-packages/bin:~/.gem/ruby/2.6.0/bin
 
 # Options
 setopt PROMPT_SUBST
@@ -20,6 +20,7 @@ export TMPDIR="$TMP"
 export TMPPREFIX="${TMPDIR}/zsh"
 export SUDO_EDITOR="/usr/bin/vim -p -X"
 export TERM=xterm-256color
+export GPG_TTY=$(tty)
 #export ANDROID_HOME="/opt/android-sdk"
 export ANDROID_HOME="/mnt/shared/android-studio-sdk"
 export ANDROID_SDK_ROOT=$ANDROID_HOME
@@ -102,6 +103,9 @@ PROMPT="
 ${git_info}\
 %{$fg[white]%}[%D %*]%(?..[%{$terminfo[bold]$fg[red]%}%?%{$reset_color%}] )
 %{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
+
+# Keychain
+eval $(keychain --eval --quiet id_rsa ~/.ssh/id_rsa)
 
 # Aliases
 alias rm='rm -i'

@@ -20,6 +20,7 @@ set incsearch
 set ignorecase
 set smartcase
 set lazyredraw
+set foldmethod=indent
 
 set noexpandtab
 set tabstop=8
@@ -80,7 +81,7 @@ set fileformats=unix,dos,mac
 
 " Base16
 let base16colorspace=256
-colorscheme Tomorrow-Night
+colorscheme base16-tomorrow-night
 
 syntax on
 
@@ -106,6 +107,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'chilicuil/vim-sprunge'
 Plugin 'tpope/vim-fugitive'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'vim-latex/vim-latex'
 
 call vundle#end()
 
