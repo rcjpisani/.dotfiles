@@ -12,7 +12,6 @@ set backspace=indent,eol,start
 set laststatus=2
 set bg=dark
 set t_Co=256
-set term=screen-256color
 set cursorline
 set background=dark	
 set hlsearch
@@ -27,14 +26,18 @@ set tabstop=8
 set softtabstop=8
 set shiftwidth=8
 
+if !has('nvim') && !exists('g:vscode')
+	set term=screen-256color
+endif
+
 augroup twospaces
-	    autocmd!
-	    autocmd FileType javascript,json,html,typescript setlocal expandtab ts=2 sts=2 sw=2
+	autocmd!
+	autocmd FileType javascript,json,html,typescript setlocal expandtab ts=2 sts=2 sw=2
 augroup END
 
 augroup fourspaces
-	    autocmd!
-	    autocmd FileType java,php,python setlocal expandtab ts=4 sts=4 sw=4
+	autocmd!
+	autocmd FileType java,php,python setlocal expandtab ts=4 sts=4 sw=4
 augroup END
 
 augroup typescript

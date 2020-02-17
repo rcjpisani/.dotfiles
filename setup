@@ -11,19 +11,19 @@ mkdir -p ~/$olddir
 printf '%s\n' "Done."
 
 printf '%s\n' "Changing to the $dir directory..."
-cd ~/$dir
+cd ~/$dir || return
 printf '%s\n' "Done."
 
 printf '%s\n' "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
-	mv ~/$file ~/$olddir
+	mv "$HOME/$file" "$HOME/$olddir"
 	printf '%s\n' "Creating symlink to $file in home dir."
-	ln -s ~/$dir/$file ~/$file
+	ln -s "$HOME/$dir/$file" "$HOME/$file"
 done
 
 printf '%s\n' "==> Cloning Vundle"
 rm -rf ~/.vim/bundle
-mkdir ~/.vim/bundle && cd ~/.vim/bundle
+mkdir ~/.vim/bundle && cd ~/.vim/bundle || return
 git clone https://github.com/VundleVim/Vundle.vim.git
 printf '%s\n' "Done."
 
@@ -38,5 +38,11 @@ ln ~/.vim/colors/lightline/streamline.vim ~/.vim/bundle/lightline.vim/autoload/l
 cp ~/.vim/bundle/base16-vim/colors/*.vim ~/.vim/colors
 printf '%s\n' "Done."
 
-cd $cwd
+printf '%s\n' "==> Setting up Neovim"
+mkdir -p ~/.config
+ln -s "$HOME/$dir/.vimrc" "$HOME/$dir/.vim/init.vim"
+ln -s "$HOME/$dir/.vim" ~/.config/nvim
+printf '%s\n' "Done."
+
+cd "$cwd" || return
 printf '%s\n' "==> Finished. Please restart your shell or source your shell's config file."
