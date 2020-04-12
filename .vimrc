@@ -111,6 +111,7 @@ Plugin 'chilicuil/vim-sprunge'
 Plugin 'tpope/vim-fugitive'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'vim-latex/vim-latex'
+Plugin 'stephpy/vim-yaml'
 
 call vundle#end()
 

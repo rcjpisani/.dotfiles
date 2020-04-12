@@ -1,0 +1,8 @@
+#!/bin/sh
+#pactl load-module module-jackdbus-detect channels=2 &&
+pactl load-module module-jack-sink client_name='Discord\ IN' &&
+pactl load-module module-jack-source client_name='Discord\ OUT' &&
+pactl load-module module-jack-sink client_name='Teams\ IN' &&
+pactl load-module module-jack-source client_name='Teams\ OUT' &&
+pactl load-module module-jack-sink client_name='Slack\ IN' &&
+pactl load-module module-jack-source client_name='Slack\ OUT'

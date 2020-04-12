@@ -23,7 +23,8 @@ export TERM=xterm-256color
 export GPG_TTY=$(tty)
 #export ANDROID_HOME="/opt/android-sdk"
 export ANDROID_HOME="/mnt/shared/android-studio-sdk"
-export ANDROID_SDK_ROOT=$ANDROID_HOME
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+export XDG_CONFIG_HOME="$HOME/.config/autostart"
 
 # Completion
 zstyle ':completion:*' menu select
