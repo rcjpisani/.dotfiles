@@ -3,7 +3,7 @@
 cwd=$(pwd)
 dir=.dotfiles
 olddir=.dotfiles_old
-files=".bashrc .bash_profile .bin .dwm .gitignore_global .screenrc .tmp .tmux.conf .vim .vimrc .xbindkeysrc .Xdefaults .xinitrc .Xresources .zshrc"
+files=".bashrc .bash_profile .bin .dwm .gitignore_global .screenrc .tmp .tmux.conf .vim .vimrc .xbindkeysrc .Xdefaults .xinitrc .Xresources .zshrc .zprofile"
 
 printf '%s\n' "==> Starting setup process"
 printf '%s\n' "Creating $olddir for backup of any existing dotfiles in ~ ..."
