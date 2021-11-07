@@ -1,5 +1,6 @@
 *.sw*
-vim/*
-Vundle.vim
-tmp/*
-base16-shell/.config/base16-shell*
+vim/.vim/autoload*
+vim/.vim/bundle*
+vim/.vim/colors/base16*
+vim/.vim/.netrwhist
+vim/.vim/plugged*
