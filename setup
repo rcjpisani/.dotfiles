@@ -2,35 +2,27 @@
 
 cwd=$(pwd)
 dir=.dotfiles
-olddir=.dotfiles_old
-files=".bashrc .bash_profile .bin .dwm .gitignore_global .screenrc .tmp .tmux.conf .vim .vimrc .xbindkeysrc .Xdefaults .xinitrc .Xresources .zshrc .zprofile"
 
 printf '%s\n' "==> Starting setup process"
-printf '%s\n' "Creating $olddir for backup of any existing dotfiles in ~ ..."
-mkdir -p ~/$olddir
-printf '%s\n' "Done."
 
 printf '%s\n' "Changing to the $dir directory..."
 cd ~/$dir || return
 printf '%s\n' "Done."
 
-printf '%s\n' "Moving any existing dotfiles from ~ to $olddir"
-for file in $files; do
-	mv "$HOME/$file" "$HOME/$olddir"
-	printf '%s\n' "Creating symlink to $file in home dir."
-	ln -s "$HOME/$dir/$file" "$HOME/$file"
-done
+printf '%s\n' "Running GNU Stow"
+stow --verbose */
+printf '%s\n' "Done."
 
 printf '%s\n' "==> Setting up colours"
 rm -rf ~/.config/base16-shell
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-ln ~/.vim/colors/lightline/streamline.vim ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/
+git clone https://github.com/chriskempson/base16-shell.git "$HOME/.config/base16-shell/"
+cp ~/.vim/colors/lightline/streamline.vim ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/
 cp ~/.vim/bundle/base16-vim/colors/*.vim ~/.vim/colors
 printf '%s\n' "Done."
 
 printf '%s\n' "==> Setting up Neovim"
 mkdir -p ~/.config
-ln -s "$HOME/$dir/.vimrc" "$HOME/$dir/.vim/init.vim"
+ln -s "$HOME/$dir/.vimrc" "$HOME/$dir/vim/.vim/init.vim"
 ln -s "$HOME/$dir/.vim" ~/.config/nvim
 printf '%s\n' "Done."
 

@@ -1,9 +1,0 @@
-#!/bin/sh
-
-systemctl --user stop pipewire.socket &&
-systemctl --user stop pipewire.service &&
-systemctl --user stop pulseaudio.socket &&
-systemctl --user stop pulseaudio.service &&
-pkill -9 kded5 &&
-pkill -9 jackdbus &&
-pkill -9 jackd

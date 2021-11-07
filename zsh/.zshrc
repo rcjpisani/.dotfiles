@@ -103,7 +103,7 @@ ${git_info}\
 %{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
 
 # Keychain
-eval $(keychain --eval --quiet id_rsa ~/.ssh/id_rsa)
+#eval $(keychain --eval --quiet id_rsa ~/.ssh/id_rsa)
 
 # Aliases
 alias rm='rm -i'
@@ -130,7 +130,5 @@ alias restart='sudo systemctl reboot'
 alias sleep='sudo systemctl suspend'
 
 alias v='vim'
-alias sv='sudo vim'
+alias sv='sudoedit'
 alias note='vim `date "+%Y-%m-%d"`'
-
-alias redwm='cd ~/.dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm'

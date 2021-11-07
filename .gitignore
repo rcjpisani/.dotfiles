@@ -1,5 +1,5 @@
 *.sw*
-.vim/*
-.bin/composer*
+vim/*
 Vundle.vim
-.tmp/*
+tmp/*
+base16-shell/.config/base16-shell*
