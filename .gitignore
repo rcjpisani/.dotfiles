@@ -2,5 +2,6 @@
 vim/.vim/autoload*
 vim/.vim/bundle*
 vim/.vim/colors/base16*
+vim/.vim/init.vim
 vim/.vim/.netrwhist
 vim/.vim/plugged*

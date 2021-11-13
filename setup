@@ -22,8 +22,10 @@ printf '%s\n' "Done."
 
 printf '%s\n' "==> Setting up Neovim"
 mkdir -p ~/.config
-ln -s "$HOME/$dir/.vimrc" "$HOME/$dir/vim/.vim/init.vim"
-ln -s "$HOME/$dir/.vim" ~/.config/nvim
+rm -f "$HOME/$dir/vim/.vim/init.vim"
+rm -f "$HOME/.config/nvim"
+ln -s "$HOME/$dir/vim/.vimrc" "$HOME/$dir/vim/.vim/init.vim"
+ln -s "$HOME/$dir/vim/.vim" "$HOME/.config/nvim"
 printf '%s\n' "Done."
 
 cd "$cwd" || return
