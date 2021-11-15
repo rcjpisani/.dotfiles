@@ -6,7 +6,7 @@ dir=.dotfiles
 printf '%s\n' "==> Starting setup process"
 
 printf '%s\n' "Changing to the $dir directory..."
-cd ~/$dir || return
+cd "$HOME/$dir" || return
 printf '%s\n' "Done."
 
 printf '%s\n' "Running GNU Stow"
@@ -14,14 +14,15 @@ stow --verbose */
 printf '%s\n' "Done."
 
 printf '%s\n' "==> Setting up colours"
-rm -rf ~/.config/base16-shell
+rm -rf "$HOME/.config/base16-shell"
 git clone https://github.com/chriskempson/base16-shell.git "$HOME/.config/base16-shell/"
-cp ~/.vim/colors/lightline/streamline.vim ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/
-cp ~/.vim/bundle/base16-vim/colors/*.vim ~/.vim/colors
+mkdir -p "$HOME/.vim/plugged"
+cp "$HOME/.vim/colors/lightline/streamline.vim" "$HOME/.vim/plugged/lightline.vim/autoload/lightline/colorscheme/"
+cp "$HOME"/.vim/plugged/base16-vim/colors/*.vim "$HOME/.vim/colors"
 printf '%s\n' "Done."
 
 printf '%s\n' "==> Setting up Neovim"
-mkdir -p ~/.config
+mkdir -p "$HOME/.config"
 rm -f "$HOME/$dir/vim/.vim/init.vim"
 rm -f "$HOME/.config/nvim"
 ln -s "$HOME/$dir/vim/.vimrc" "$HOME/$dir/vim/.vim/init.vim"
