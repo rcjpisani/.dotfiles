@@ -82,10 +82,6 @@ endtry
 
 set fileformats=unix,dos,mac
 
-" Base16
-let base16colorspace=256
-colorscheme base16-tomorrow-night
-
 syntax on
 
 " vim-plug - Automatic installation
@@ -127,6 +123,11 @@ if has('gui_running')
 endif
 
 let mapleader=","
+
+" Base16
+set termguicolors
+let base16colorspace=256
+colorscheme base16-tomorrow-night
 
 let g:lightline = {
       \ 'colorscheme': 'Tomorrow_Night',
