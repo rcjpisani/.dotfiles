@@ -125,7 +125,7 @@ endif
 let mapleader=","
 
 " Base16
-set termguicolors
+" set termguicolors
 let base16colorspace=256
 colorscheme base16-tomorrow-night
 
