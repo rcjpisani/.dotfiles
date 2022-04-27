@@ -2,7 +2,7 @@
 ##.zshrc##
 
 # Path
-PATH=$PATH:~/.bin:~/.local/bin:~/.config/composer/vendor/bin:~/.npm-packages/bin:~/.gem/ruby/2.6.0/bin
+PATH=$PATH:~/.bin:~/.local/bin
 
 # Options
 setopt PROMPT_SUBST
