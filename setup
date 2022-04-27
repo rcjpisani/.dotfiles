@@ -3,6 +3,12 @@
 cwd=$(pwd)
 dir=.dotfiles
 
+which stow
+if [ "$?" -ne "0" ]; then
+	printf '%s\n' "Error: GNU Stow not found, exiting..."
+	exit 1;
+fi
+
 printf '%s\n' "==> Starting setup process"
 
 printf '%s\n' "Changing to the $dir directory..."
