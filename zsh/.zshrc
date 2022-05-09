@@ -5,6 +5,7 @@
 PATH=$PATH:~/.bin:~/.local/bin
 
 # Options
+bindkey -v # Vim bindings pls
 setopt PROMPT_SUBST
 
 # History
