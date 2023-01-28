@@ -22,7 +22,7 @@ export TMPPREFIX="${TMPDIR}/zsh"
 export SUDO_EDITOR="/usr/bin/vim -p -X"
 export TERM=xterm-256color
 export GPG_TTY=$(tty)
-export XDG_CONFIG_HOME="$HOME/.config/autostart"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Completion
 zstyle ':completion:*' menu select
