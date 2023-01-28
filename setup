@@ -30,9 +30,9 @@ printf '%s\n' "Done."
 printf '%s\n' "==> Setting up Neovim"
 mkdir -p "$HOME/.config"
 rm -f "$HOME/$dir/vim/.vim/init.vim"
-rm -f "$HOME/.config/nvim"
-ln -s "$HOME/$dir/vim/.vimrc" "$HOME/$dir/vim/.vim/init.vim"
-ln -s "$HOME/$dir/vim/.vim" "$HOME/.config/nvim"
+rm -rf {$HOME/.config/nvim,$HOME/.local/share/nvim,$HOME/.local/state/nvim}
+git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+	~/.local/share/nvim/site/pack/packer/start/packer.nvim
 printf '%s\n' "Done."
 
 cd "$cwd" || return
