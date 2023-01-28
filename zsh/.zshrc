@@ -14,12 +14,13 @@ HISTSIZE='10000'
 SAVEHIST="${HISTSIZE}"
 
 # Exports
+export SUDO_EDITOR="/usr/bin/vim -p -X"
 export EDITOR="/usr/bin/vim"
+export VISUAL="/usr/bin/vim"
 export TMP="$HOME/.tmp"
 export TEMP="$TMP"
 export TMPDIR="$TMP"
 export TMPPREFIX="${TMPDIR}/zsh"
-export SUDO_EDITOR="/usr/bin/vim -p -X"
 export TERM=xterm-256color
 export GPG_TTY=$(tty)
 export XDG_CONFIG_HOME="$HOME/.config"
