@@ -11,4 +11,4 @@ vim/.vim/.netrwhist
 vim/.vim/plugged*
 
 # Neovim
-plugin/packer_compiled.lua
+nvim/.config/nvim/plugin/packer_compiled.lua
