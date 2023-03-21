@@ -4,7 +4,7 @@ cwd=$(pwd)
 dir=.dotfiles
 
 which stow
-if [ "$?" -ne "0" ]; then
+if ! which stow; then
 	printf '%s\n' "Error: GNU Stow not found, exiting..."
 	exit 1;
 fi
@@ -16,7 +16,7 @@ cd "$HOME/$dir" || return
 printf '%s\n' "Done."
 
 printf '%s\n' "Running GNU Stow"
-stow --verbose */
+stow --verbose ./*
 printf '%s\n' "Done."
 
 printf '%s\n' "==> Setting up colours"
@@ -30,7 +30,9 @@ printf '%s\n' "Done."
 printf '%s\n' "==> Setting up Neovim"
 mkdir -p "$HOME/.config"
 rm -f "$HOME/$dir/vim/.vim/init.vim"
-rm -rf {$HOME/.config/nvim,$HOME/.local/share/nvim,$HOME/.local/state/nvim}
+rm -rf "$HOME"/.config/nvim
+rm -rf "$HOME"/.local/share/nvim
+rm -rf "$HOME"/.local/state/nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 	~/.local/share/nvim/site/pack/packer/start/packer.nvim
 printf '%s\n' "Done."
