@@ -111,10 +111,10 @@ ${git_info}\
 
 # Start only ONE SSH Agent process at a time
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-	ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+	ssh-agent -t 1h > "$HOME/.ssh/agent.env"
 fi
 if [ ! -f "$SSH_AUTH_SOCK" ]; then
-	source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+	source "$HOME/.ssh/agent.env" >/dev/null
 fi
 
 # Keychain
