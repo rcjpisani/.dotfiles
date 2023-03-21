@@ -1,6 +1,11 @@
 --
 -- OPTIONS
 --
+vim.opt.guicursor = ""
+vim.opt.nu = true
+vim.opt.smartindent = true
+vim.opt.termguicolors = true
+vim.opt.isfname:append("@-@")
 
 -- o.background = 'dark'
 
@@ -15,7 +20,7 @@ vim.opt.autowrite = true -- save the file before leaving if changed
 vim.opt.autoread = true -- auto load file changes occured outside vim
 -- use spaces for tabs and whatnot
 vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 vim.opt.shiftround = true -- round indent to sw compatible
 vim.opt.expandtab = true
 
@@ -40,10 +45,10 @@ vim.opt.expandtab = true
 vim.opt.smarttab = true
 vim.opt.cindent = true
 vim.opt.autoindent = true
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.textwidth = 300
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 0
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.softtabstop = -1 -- If negative, shiftwidth value is used
 vim.opt.list = false
 vim.opt.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂,eol:⁋'
@@ -56,7 +61,8 @@ vim.opt.clipboard = 'unnamedplus'
 -- Case insensitive searching UNLESS /C or capital in search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
--- vim.opt.hlsearch = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
 -- Undo and backup options
 vim.opt.backup = false
