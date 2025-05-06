@@ -1,0 +1,4 @@
+#!/bin/sh
+ARGS="steam://flushconfig -forcesteamupdate -forcepackagedownload -clearbeta -shutdown"
+
+/usr/bin/steam-runtime "$ARGS" %U

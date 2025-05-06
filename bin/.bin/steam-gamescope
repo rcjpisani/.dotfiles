@@ -1,0 +1,22 @@
+#!/bin/sh
+WIDTH=1920
+HEIGHT=1080
+ARGS="steam://open/bigpicture"
+#ARGS="-bigpicture -fullscreen -forcesteamupdate -forcepackagedownload -exitsteam"
+
+#export LD_PRELOAD="$LD_PRELOAD:/home/$USER/.local/share/Steam/ubuntu12_64/gameoverlayrenderer.so"
+export PrefersNonDefaultGPU=false
+export X-KDE-RunOnDiscreteGpu=false
+#export SDL_VIDEODRIVER=x11 # https://github.com/ValveSoftware/gamescope/issues/1051
+#unset SDL_VIDEODRIVER
+
+/usr/bin/gamescope \
+    -W "$WIDTH" \
+    -H "$HEIGHT" \
+    -w "$WIDTH" \
+    -h "$HEIGHT" \
+    -f \
+    -e \
+    -- /usr/bin/steam-runtime "$ARGS" %U
+
+#sudo setcap 'CAP_SYS_NICE=eip' "$(which gamescope)"
